@@ -11,10 +11,6 @@ body {
     color: #222;
 }
 
-.container {
-
-}
-
 .keys {
     min-height: 100vh;
     display: flex;
@@ -46,7 +42,6 @@ kbd {
     font-family: var(--font-sans);
     font-size: 1rem;
 }
-
 
 .note {
     font-family: var(--font-serif);
