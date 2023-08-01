@@ -1,0 +1,61 @@
+:root {
+  --outer-frame: 10px;
+  --inner-frame: 1px;
+  --outer-frame-color: #fff;
+  --inner-frame-color: #fff;
+  --brightness: 1;
+  --contrast: 1;
+  --saturate: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dbdbdb;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  padding: 5rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+img {
+  max-width: 50vw;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border: var(--outer-frame) solid var(--outer-frame-color);
+  outline: var(--inner-frame) solid var(--inner-frame-color);
+  outline-offset: -20px;
+  filter: brightness(var(--brightness)) contrast(var(--contrast)) saturate(var(--saturate));
+}
+
+.controls {
+  padding: 0 3rem 0 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.control {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
