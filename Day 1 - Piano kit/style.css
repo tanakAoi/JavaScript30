@@ -3,6 +3,10 @@
     --font-serif: 'ltc-broadway-engraved', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: url(assets/background.jpg) center/cover no-repeat fixed;
     margin: 0;
@@ -11,8 +15,19 @@ body {
     color: #222;
 }
 
+.container {
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
 .keys {
-    min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,4 +61,13 @@ kbd {
 .note {
     font-family: var(--font-serif);
     font-size: 1.8rem;
+}
+
+p a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color: #c60b46;
 }
