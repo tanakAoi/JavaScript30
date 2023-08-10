@@ -58,9 +58,15 @@ img {
   gap: 1.5rem;
 }
 
-span {
-  margin-left: auto;
-  margin-right: 0;
+p {
+  padding-left: 6rem;
+}
+p a {
+  text-decoration: none;
+  color: #222;
+}
+p a:hover {
+  color: #888;
 }
 
 /*# sourceMappingURL=style.css.map */
