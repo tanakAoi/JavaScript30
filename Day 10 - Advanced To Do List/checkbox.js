@@ -16,7 +16,7 @@ checkboxApp = () => {
         newBox.classList.add('todo__box')
 
         newBox.innerHTML = `
-        <button class="todo__button todo__button--check material-symbols-outlined">check_box_outline_blank</button>
+        <input class="todo__checkbox" type="checkbox">
         <li class="todo__item">${inputValue}</li>
         <button class="todo__button todo__button--remove material-symbols-outlined">delete</button>
         `
@@ -26,69 +26,65 @@ checkboxApp = () => {
         input.value = ''
 
         // Check todo
-        const checkButtons = document.querySelectorAll('.todo__button--check')
-        checkButtons.forEach(checkButton => checkButton.addEventListener('click', checkTodo))
+        const checkBoxes = document.querySelectorAll('.todo__checkbox')
+        checkBoxes.forEach(checkBox => checkBox.addEventListener('click', checkTodo))
 
         // Remove todo
         const removeButtons = document.querySelectorAll('.todo__button--remove')
         removeButtons.forEach(removeButton => removeButton.addEventListener('click', removeTodo))
     }
 
+    let lastChecked
+
     const checkTodo = (event) => {
 
-        const checkedButton = event.target
-        const checkedBox = checkedButton.parentElement
-
-        if ( checkedButton.innerText == 'check_box_outline_blank' ) {
-            
-            checkedButton.innerText = 'check_box'
-            checkedBox.classList.add('todo__box--checked')
-            
-        } else {
-            
-            checkedButton.innerText = 'check_box_outline_blank'
-            checkedBox.classList.remove('todo__box--checked')
-            
-        } 
-
-        const checkButtons = document.querySelectorAll('.todo__button--check')
-        const checkBoxes = document.querySelectorAll('.todo__box')
-
-        // console.log(checkButtons, checkBoxes)
-
-        let lastChecked
+        const checkBoxes = document.querySelectorAll('.todo__checkbox')
+        const box = event.target.parentElement
         
-        const checkTodos = (event) => {
+        let inBetween = false
+        
+        if ( event.shiftKey && event.target.checked ) {
             
-            let checkInBetween = false
+            checkBoxes.forEach(checkBox => {
+                
+                if ( checkBox === event.target || checkBox === lastChecked ) {
 
-            if ( event.shiftKey && event.target.innerText == 'check_box' ) {
+                    inBetween = !inBetween
 
-                checkButtons.forEach(checkButton => {
+                }
 
-                    if ( checkButton === event.target || checkButton === lastChecked ) {
+                if ( inBetween ) {
 
-                        checkInBetween = !checkInBetween
-
-                    }
-
-                    if ( checkInBetween ) {
-
-                        checkButton.innerText = 'check_box'
-                        checkBoxes.forEach(checkBox => checkBox.classList.add('todo__box--checked'))
-
-                    }
-                })
-            }
-            
-            lastChecked = event.target
+                    checkBox.checked = true
+                    
+                }
+            })
 
         }
-        
 
-        checkButtons.forEach(checkButton => checkButton.addEventListener('click', checkTodos))
+        if ( event.shiftKey && !event.target.checked) {
+
+            checkBoxes.forEach(checkBox => {
+                
+                if ( checkBox === event.target || checkBox === lastChecked ) {
+
+                    inBetween = !inBetween
+
+                }
+
+                if ( inBetween ) {
+
+                    checkBox.checked = false
+                    
+                }
+            })
+
+        }
+
+        lastChecked = event.target
 
     }
+
 
     const removeTodo = (event) => {
 
