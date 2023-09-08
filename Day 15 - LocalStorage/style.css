@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(patrick-tomasso-GXXYkSwndP4-unsplash.jpg);
+  background-size: cover;
+  font-family: "Jost", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  caret-color: transparent;
+  font-family: "Jost", sans-serif;
+  border: none;
+  font-size: 1rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+a:hover {
+  color: #009c9c;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #e3e3e3;
+  background-clip: padding-box;
+  border: 1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.menu__title {
+  padding-bottom: 1.5rem;
+}
+.menu__form {
+  display: flex;
+  gap: 1rem;
+}
+.menu__input {
+  background-color: transparent;
+  border-bottom: 2px solid #2d2d2d;
+}
+.menu__submit {
+  padding: 0.2em 0.8em;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid rgba(45, 45, 45, 0.8);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 0.8em;
+}
+.menu__submit:hover {
+  cursor: pointer;
+}
+.menu__submit:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.menu__list {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.menu__item {
+  border-bottom: 2px dotted rgba(45, 45, 45, 0.8);
+}
+
+.photoby {
+  color: #f5f5f5;
+}
+
+/*# sourceMappingURL=style.css.map */
