@@ -108,9 +108,23 @@ a {
 
     &__item {
         border-bottom: 2px dotted rgba(45, 45, 45, 80%);
-    }
+        
+        & input {
+            display: none;
 
+            & + label:before {
+                content: "🚼";
+                margin-right: 10px;
+            }
+            
+            &:checked + label:before {
+                content: "🔞";
+            }
+        }
+
+    }
 }
+
 
 .photoby {
     color: #f5f5f5;
