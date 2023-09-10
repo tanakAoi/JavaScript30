@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: niveau-grotesk, sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(104, 203, 255);
+  background: linear-gradient(90deg, rgba(104, 203, 255, 0.6) 0%, rgba(218, 255, 129, 0.6) 33%, rgba(255, 255, 224, 0.6) 66%, rgba(255, 207, 228, 0.6) 100%);
+}
+
+.title {
+  margin: 6rem 0 2rem 0;
+  font-size: 14rem;
+  color: rgb(46, 173, 171);
+  text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  padding: 3rem 7rem;
+  color: rgb(46, 173, 171);
+}
+
+/*# sourceMappingURL=style.css.map */
