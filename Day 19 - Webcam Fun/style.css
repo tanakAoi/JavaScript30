@@ -9,6 +9,9 @@ body {
 
 .container {
   background-color: rgb(230, 255, 139);
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
 }
 
 .controls {
@@ -17,10 +20,15 @@ body {
 
 .main-screen {
   background-color: rgb(255, 136, 136);
+  width: 100%;
 }
 
 .live-screen {
-  background-color: rgb(148, 196, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 250px;
+  width: 100%;
 }
 
 .strip {

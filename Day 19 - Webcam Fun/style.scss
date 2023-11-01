@@ -8,21 +8,30 @@ body {
 }
 
 .container {
-    background-color: rgb(230, 255, 139);
+    background-color: rgb(230, 255, 139); // temp
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
 .controls {
-    background-color: rgb(152, 255, 141);
+    background-color: rgb(152, 255, 141); // temp
 }
 
 .main-screen {
-    background-color: rgb(255, 136, 136);
+    background-color: rgb(255, 136, 136); // temp
+    width: 100%;
 }
 
 .live-screen {
-    background-color: rgb(148, 196, 255);
+    // background-color: rgb(148, 196, 255); // temp
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 250px;
+    width: 100%;
 }
 
 .strip {
-    background-color: rgb(255, 194, 159);
+    background-color: rgb(255, 194, 159); // temp
 }
