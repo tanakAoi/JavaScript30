@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(230, 255, 139);
+}
+
+.controls {
+  background-color: rgb(152, 255, 141);
+}
+
+.main-screen {
+  background-color: rgb(255, 136, 136);
+}
+
+.live-screen {
+  background-color: rgb(148, 196, 255);
+}
+
+.strip {
+  background-color: rgb(255, 194, 159);
+}
+
+/*# sourceMappingURL=style.css.map */
