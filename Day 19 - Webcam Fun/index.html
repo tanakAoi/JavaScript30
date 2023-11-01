@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 - Webcam Fun</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="controls">
+            <button class="btn__take-photo">Take Photo</button>
+            <button class="btn__red-effect">Red Effect</button>
+            <button class="btn__rgb-split">RGB Split</button>
+            <button class="btn__green-screen">Green Screen</button>
+
+            <div class="rgb">
+                <div class="rgb__red">
+                    <label for="rmin">min(R):</label>
+                    <input type="range" min="0" max="255" name="rmin">
+                    <label for="rmax">max(R):</label>
+                    <input type="range" min="0" max="255" name="rmax">
+                </div>
+                <div class="rgb__green">
+                    <label for="gmin">min(G):</label>
+                    <input type="range" min="0" max="255" name="gmin">
+                    <label for="gmax">max(G):</label>
+                    <input type="range" min="0" max="255" name="gmax">
+                </div>
+                <div class="rgb__blue">
+                    <label for="bmin">min(B):</label>
+                    <input type="range" min="0" max="255" name="bmin">
+                    <label for="bmax">max(B):</label>
+                    <input type="range" min="0" max="255" name="bmax">
+                </div>
+            </div>
+        </div>
+
+        <canvas class="screen__main"></canvas>
+        <video src="" class="screen__live"></video>
+        <div class="strip"></div>
+
+    </div>
+</body>
+</html>
