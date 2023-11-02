@@ -11,36 +11,38 @@
     <div class="container">
 
         <div class="controls">
-            <button class="btn__take-photo">Take Photo</button>
-            <button class="btn__red-effect">Red Effect</button>
-            <button class="btn__rgb-split">RGB Split</button>
-            <button class="btn__green-screen">Green Screen</button>
+            <button class="btn btn__take-photo">Take Photo</button>
+            <button class="btn btn__red-effect">Red Effect</button>
+            <button class="btn btn__rgb-split">RGB Split</button>
+            <button class="btn btn__green-screen">Green Screen</button>
 
             <div class="rgb">
                 <div class="rgb__red">
                     <label for="rmin">min(R):</label>
-                    <input type="range" min="0" max="255" name="rmin">
+                    <input type="range" min="0" max="255" id="rmin">
                     <label for="rmax">max(R):</label>
-                    <input type="range" min="0" max="255" name="rmax">
+                    <input type="range" min="0" max="255" id="rmax">
                 </div>
                 <div class="rgb__green">
                     <label for="gmin">min(G):</label>
-                    <input type="range" min="0" max="255" name="gmin">
+                    <input type="range" min="0" max="255" id="gmin">
                     <label for="gmax">max(G):</label>
-                    <input type="range" min="0" max="255" name="gmax">
+                    <input type="range" min="0" max="255" id="gmax">
                 </div>
                 <div class="rgb__blue">
                     <label for="bmin">min(B):</label>
-                    <input type="range" min="0" max="255" name="bmin">
+                    <input type="range" min="0" max="255" id="bmin">
                     <label for="bmax">max(B):</label>
-                    <input type="range" min="0" max="255" name="bmax">
+                    <input type="range" min="0" max="255" id="bmax">
                 </div>
             </div>
         </div>
 
-        <canvas class="screen__main"></canvas>
-        <video src="" class="screen__live"></video>
+        <canvas class="main-screen"></canvas>
+        <video src="" class="live-screen"></video>
         <div class="strip"></div>
+
+        <audio src="snap.mp3"></audio>
 
     </div>
 </body>
