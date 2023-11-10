@@ -4,7 +4,7 @@ const webCamApp = () => {
     const mainScreen = document.querySelector('.main-screen')
     const ctx = mainScreen.getContext('2d')
     const strip = document.querySelector('.strip')
-    const takePhotoBtn = document.querySelector('.btn__take-photo')
+    const takePhotoBtn = document.querySelector('button')
     const audio = document.querySelector('audio')
 
     const getVideo = () => {
@@ -37,10 +37,13 @@ const webCamApp = () => {
             // Take the pixels out
             let pixels = ctx.getImageData(0, 0, width, height)
 
-            // Edit pixel data in functions
+            /**
+             * Edit pixel data in functions
+             * Unused functions must be commented out  
+             * */ 
             // pixels = redFilter(pixels)
-            // pixels = RGBSplit(pixels)
-            pixels = greenScreen(pixels)
+            pixels = RGBSplit(pixels)
+            // pixels = greenScreen(pixels)
 
             // Put pixels back
             ctx.putImageData(pixels, 0, 0)

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 19 - Webcam Fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -11,28 +14,24 @@
     <div class="container">
 
         <div class="controls">
-            <button class="btn btn__take-photo">Take Photo</button>
-
             <div class="rgb">
-                <div class="rgb__red">
-                    <label for="rmin">min(R):</label>
-                    <input type="range" min="0" max="255" name="rmin">
-                    <label for="rmax">max(R):</label>
-                    <input type="range" min="0" max="255" name="rmax">
-                </div>
-                <div class="rgb__green">
-                    <label for="gmin">min(G):</label>
-                    <input type="range" min="0" max="255" name="gmin">
-                    <label for="gmax">max(G):</label>
-                    <input type="range" min="0" max="255" name="gmax">
-                </div>
-                <div class="rgb__blue">
-                    <label for="bmin">min(B):</label>
-                    <input type="range" min="0" max="255" name="bmin">
-                    <label for="bmax">max(B):</label>
-                    <input type="range" min="0" max="255" name="bmax">
-                </div>
+                <label for="rmin">min(R):</label>
+                <input type="range" min="0" max="255" name="rmin">
+                <label for="rmax">max(R):</label>
+                <input type="range" min="0" max="255" name="rmax">
+
+                <label for="gmin">min(G):</label>
+                <input type="range" min="0" max="255" name="gmin">
+                <label for="gmax">max(G):</label>
+                <input type="range" min="0" max="255" name="gmax">
+
+                <label for="bmin">min(B):</label>
+                <input type="range" min="0" max="255" name="bmin">
+                <label for="bmax">max(B):</label>
+                <input type="range" min="0" max="255" name="bmax">
             </div>
+
+            <button>Take Photo</button>
         </div>
 
         <canvas class="main-screen"></canvas>

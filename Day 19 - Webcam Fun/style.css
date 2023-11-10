@@ -5,10 +5,11 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #777777;
 }
 
 .container {
-  background-color: rgb(230, 255, 139);
   min-height: 100vh;
   height: 100%;
   position: relative;
@@ -19,12 +20,61 @@ body {
 }
 
 .controls {
-  background-color: rgb(152, 255, 141);
   grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.controls button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid transparent;
+  outline: 1px solid #fff;
+  border-radius: 30px;
+  padding: 20px;
+}
+.controls button:hover {
+  outline: 3px solid #fff;
+  font-weight: 500;
+}
+
+.rgb {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rgb input {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+.rgb input::-webkit-slider-runnable-track {
+  background: #e3e3e3;
+  height: 6px;
+  border-radius: 8px;
+}
+.rgb input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  margin-top: -3px;
+  background: #222;
+  border-radius: 50%;
+}
+.rgb label {
+  font-weight: 500;
+  color: #fff;
 }
 
 .main-screen {
-  background-color: rgb(255, 136, 136);
   max-width: 70rem;
   width: 100%;
   display: block;
@@ -34,17 +84,18 @@ body {
 }
 
 .live-screen {
-  background-color: rgb(148, 196, 255);
   position: absolute;
   top: 0;
   right: 0;
   max-width: 250px;
   width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .strip {
-  background-color: rgb(255, 194, 159);
   grid-area: strip;
+  padding-top: 2rem;
 }
 .strip img {
   max-width: 12rem;
